@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.boton {
+    background-color: rgb(212, 51, 51);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    box-shadow: -3px 3px 5px black;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo img {
+    width: 100px;
+    height: 70px;
+}
+
+.barranav {
+    padding-top: 25px;
+}
+
+.barranav a {
+    text-decoration: none;
+    margin: 0px 30px;
+    color: black;
+}
+
+.loggin {
+    padding-top: 20px;
+
+}
+
+main {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imagenes/wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.texto_principal {
+    width: 40%;
+    height: 50%;
+    padding: 20px;
+}
+
+.texto_principal p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 360px);
+    grid-gap: 12px;
+    overflow: hidden;
+}
+
+.contenedor img {
+    width: 300px;
+    height: 250px;
+    transition: all 300ms;
+}
+
+.tenis {
+    margin: auto;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.contenedor img:hover {
+    scale: 1.1;
+}
+
+.tenis p:nth-child(2) {
+    border-top: 2px solid black;
+    margin-top: 5px;
+}
+
+footer {
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 30px 0px 30px;
+    border-top: 1px solid rgb(159, 17, 17);
+}
+
+.footer .texto_footer {
+    width: 30%;
+}
+
+svg {
+    position: absolute;
+    top: -20px;
+}
+
+.redes {
+    z-index: 1;
+}
+
+.redes i {
+    color: black;
+    padding-right: 15px;
+}
+
+/* tenda.html */
+.compras h1 {
+    align-self: center;
+    padding: 20px 0px;
+}
+
+.compras ul {
+    padding: 0px 50px
+}
+
+.botones {
+    padding: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.compras {
+    width: 50%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    transform: translate(50%, 50%);
+}

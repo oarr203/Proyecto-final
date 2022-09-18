@@ -46,7 +46,7 @@ header {
     color: black;
 }
 
-.loggin {
+.buscar {
     padding-top: 20px;
 
 }
@@ -59,8 +59,18 @@ main {
     color: white;
     display: flex;
     align-items: center;
+}
+main .ventana{
 
-
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    height: 68vh;
+    width: 700px;
+    overflow-y: scroll;   
+}
+main .ventana::-webkit-scrollbar{
+    display: none;
 }
 
 .texto_principal {

@@ -36,6 +36,11 @@ const precio11 = document.getElementById("precio11")
 const nombre12 = document.getElementById("nombre12")
 const precio12 = document.getElementById("precio12")
 
+let buscar = document.getElementById("buscar")
+let palabra = document.getElementById("palabra")
+let elemento = document.getElementById('elem')
+let ventana = document.getElementById("ventana")
+
 articulo1.addEventListener("click", agregar1)
 articulo2.addEventListener("click", agregar2)
 articulo3.addEventListener("click", agregar3)
@@ -203,3 +208,58 @@ function agregar() {
 }
 
 console.log(productosAgregados)
+
+//aplicacion api search
+
+
+const options = {
+    method: 'GET',
+    headers: {
+        'X-User-Agent': 'desktop',
+        'X-Proxy-Location': 'EU',
+        'X-RapidAPI-Key': 'fefec7e42bmshdba9da2e3789d3cp1357eejsn1e420a6eee42',
+        'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
+    }
+};
+
+let contador = 0;
+buscar.onclick = () => {
+
+    ventana.style.background = "rgba(0, 0, 0, 0.5)"
+    elem.style.padding = "23px"
+
+
+    if (contador != 0) {
+
+        let lista = document.getElementsByTagName("li")
+
+        while (elem.firstChild) {
+            elem.removeChild(elem.firstChild);
+        }
+    }
+
+    console.log(palabra.value)
+
+    fetch(`https://google-search3.p.rapidapi.com/api/v1/search/q=${palabra.value}`, options)
+        .then(response => response.json())
+        .then(response => {
+
+            let titulo = response.results.map(datos => datos.title)
+            let enlace = response.results.map(datos => datos.link)
+            let descripcion = response.results.map(datos => datos.description)
+
+            for (let i = 0; i < titulo.length; i++) {
+
+                let elemento2 = document.createElement('li')
+                elemento2.innerHTML = `<a href="${enlace[i]}" target="blank">${titulo[i]}</a><p>${descripcion[i]}</p>`
+                elemento.appendChild(elemento2)
+
+                contador = 1;
+            }
+            console.log(response)
+        })
+        .catch(err => console.error(err));
+
+
+
+}

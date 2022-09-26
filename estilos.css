@@ -66,7 +66,7 @@ main .ventana{
     top: 90px;
     right: 5px;
     height: 68vh;
-    width: 700px;
+    width: 55%;
     overflow-y: scroll;   
 }
 main .ventana::-webkit-scrollbar{
@@ -168,4 +168,35 @@ svg {
     flex-direction: column;
     border-radius: 10px;
     transform: translate(50%, 50%);
+}
+
+/* contacto */
+
+.formularioContacto{
+    width: 50%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:56%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    border-radius: 3%;
+}
+.formularioContacto h2{
+    padding: 0 35%;
+}
+.formularioContacto input, textarea{
+    margin: 20px 0px 10px 0px;
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px rgb(212, 51, 51) solid;
+    color: white; 
+}
+.formularioContacto button{
+    display: block;
+    margin: auto;
+    
 }
